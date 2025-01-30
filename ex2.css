@@ -1,0 +1,73 @@
+body{
+    
+    background: rgb(255, 255, 255);
+    
+    color:rgb(255, 255, 255);
+    margin: 0px;
+}
+.wrapper{
+    position: relative;
+    background-image:url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.nx7qQeY6MG-S8zBWkAl19AHaCH%26pid%3DApi&f=1&ipt=7a82f6189a53e90646600c8307b9f9fe022421ced5545a6762d905634c326d08&ipo=images");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    height:100vh;
+}
+.wrapper_bg{
+    
+    background-color: rgba(0, 0, 0, 0.683);
+    
+    z-index:1;
+    height:100vh
+    
+}
+
+.wrapper nav{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction:row;  
+    align-items: center;
+    
+    
+    
+}
+
+nav ul{
+    display: flex;
+    margin-left:50px;
+}
+
+nav ul li{
+    
+    margin-left:18px;
+    margin-top: 10px;
+    color:rgba(255, 255, 255, 0.766);
+    font-size: 17px;
+    font-weight: 900
+}
+
+.intro{
+    margin-top: 150px;
+    text-align: center;   
+
+}
+.btn{
+    border:1px solid red;
+    border-radius: 20px;
+    width:150px;
+    padding:10px;
+    margin:auto
+
+}
+.wrapper2{
+    text-align: center;
+}
+
+.flex-logo{
+    display:flex;
+    justify-content: space-between;
+    padding-left:50px;
+    padding-right:50px;
+    
+}
