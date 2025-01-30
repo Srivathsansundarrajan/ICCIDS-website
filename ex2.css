@@ -2,7 +2,7 @@ body{
     
     background: rgb(255, 255, 255);
     
-    color:rgb(255, 255, 255);
+    color:rgba(0, 0, 0, 0.737);
     margin: 0px;
 }
 .wrapper{
@@ -64,10 +64,68 @@ nav ul li{
     text-align: center;
 }
 
+.index{
+    text-align: justify;
+}
+
 .flex-logo{
     display:flex;
     justify-content: space-between;
     padding-left:50px;
     padding-right:50px;
+    
+}
+.committes{
+    padding-left:100px;
+    padding-right:100px;
+}
+.members_container{   
+    /* margin-top:20px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    
+}
+.member_card{
+    border:2px solid rgba(131, 203, 255, 0.452);
+    box-shadow: 2px 2px 5px rgb(185, 151, 221);
+    padding:20px;
+    text-align: center;
+    margin:20px;
+    border-radius: 20px;
+    line-height: 5px;
+
+    
+}
+.member_card p{
+    font-size: small;
+}
+.member_card img{
+    width:100px;
+    height:100px;
+    border-radius: 50px;    
+}
+.member_card .member_pos{
+    color:rgb(14, 21, 84);
+}
+
+.tech_committe{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left:100px;
+    padding-right:100px;
+    
+    
+}
+
+.tech_committe .tech_committe_col{
+    
+    text-align: justify;
+    margin:10px;
+    
+    
     
 }
