@@ -6,58 +6,115 @@ body{
     margin: 0px;
 }
 .wrapper{
-    position: relative;
+    
     background-image:url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.nx7qQeY6MG-S8zBWkAl19AHaCH%26pid%3DApi&f=1&ipt=7a82f6189a53e90646600c8307b9f9fe022421ced5545a6762d905634c326d08&ipo=images");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
     height:100vh;
+    
 }
 .wrapper_bg{
     
-    background-color: rgba(0, 0, 0, 0.683);
-    
+    background-color: rgba(0, 0, 0, 0.683);    
     z-index:1;
-    height:100vh
-    
+    height:100vh;
+        
 }
 
-.wrapper nav{
-    position: relative;
+ nav{
+   
+    position:sticky;
+    top:0;
     z-index: 1;
+    background-color:rgb(0, 0, 61);
+    height:10vh;    
     display: flex;
     flex-direction:row;  
-    align-items: center;
+    align-items: center;  
     
     
     
+}
+footer{
+    background-color:rgb(0, 0, 61);
+    color:white;
+    text-align: center;
+    padding:20px;
+    
+    
+       
+    
+}
+footer p{
+    margin:auto;
 }
 
 nav ul{
     display: flex;
     margin-left:50px;
+    
 }
 
 nav ul li{
-    
+    position: relative;
+    display: block;
     margin-left:18px;
     margin-top: 10px;
-    color:rgba(255, 255, 255, 0.766);
+    color:rgb(255, 255, 255);
     font-size: 17px;
-    font-weight: 900
+    font-weight: 900;
+    
+    
+   
+    
+    
 }
+nav li::after{
+    content: "";
+    position:absolute;
+    width:100%;
+    height:2px;
+    
+   
+    background-color:rgb(255, 0, 0);
+
+    bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.5s ease;
+}
+nav li:hover::after{
+    transform: scaleX(1);
+  }
+
 
 .intro{
-    margin-top: 150px;
+    padding-top:150px;
     text-align: center;   
 
 }
 .btn{
-    border:1px solid red;
+    background-color: #ffe1009e;
     border-radius: 20px;
     width:150px;
     padding:10px;
-    margin:auto
+    margin:auto;
+    color:black;
+
+}
+
+.btn:hover{
+       
+    background-color: #ffe100;
+    color:black;
+    border-radius: 20px;
+    width:150px;
+    padding:10px;
+    margin:auto;
+    transition-duration: 0.3s;
+    
 
 }
 .wrapper2{
@@ -75,7 +132,7 @@ nav ul li{
     padding-right:50px;
     
 }
-.committes{
+.committes,.Keynote_talks{
     padding-left:100px;
     padding-right:100px;
 }
@@ -84,10 +141,19 @@ nav ul li{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content:space-evenly;
     
     
 }
+
+.member_card:hover{
+   
+    transform: translateY(-20px);  
+    transition-duration:1s;
+    box-shadow: 5px 5px 10px rgb(185, 151, 221);
+    /* transition-timing-function: ease-in-out; */
+}
+
 .member_card{
     border:2px solid rgba(131, 203, 255, 0.452);
     box-shadow: 2px 2px 5px rgb(185, 151, 221);
@@ -95,12 +161,13 @@ nav ul li{
     text-align: center;
     margin:20px;
     border-radius: 20px;
-    line-height: 5px;
-
-    
+    width:250px;
+    padding: auto;    
 }
+
+
 .member_card p{
-    font-size: small;
+    font-size:15px;
 }
 .member_card img{
     width:100px;
@@ -109,23 +176,148 @@ nav ul li{
 }
 .member_card .member_pos{
     color:rgb(14, 21, 84);
+    
+}
+.member_card h2{
+    color:rgba(109, 15, 130, 0.693);
 }
 
 .tech_committe{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap:20px;
     padding-left:100px;
     padding-right:100px;
     
     
 }
 
+.tech_committe {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust spacing between columns */
+    font-size: 18px;
+    font-weight: 400;
+    flex-wrap: nowrap;
+}
+
 .tech_committe .tech_committe_col{
     
-    text-align: justify;
-    margin:10px;
     
+    margin:10px;
+    flex: 1; /* Makes all columns take equal space */
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
     
     
 }
+.editors,.prog_committe{
+    padding-left:100px;
+    padding-right:100px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.timeline-container{
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top:100px;
+    font-size: 18px;
+    font-weight: 700;
+    
+
+    
+    
+}
+.timeline{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.timeline-container hr{
+   
+    height: 5px;
+    background-color: #2b2b2b;
+    /* background-color: rgb(255, 255, 255); */
+    /* box-shadow: 2px 2px 10px rgb(4, 242, 255); */
+}
+.timeline .circle{
+    width:20px;
+    height:20px;
+    border-radius: 10px;
+    background-color: rgb(39, 39, 39); 
+   
+}
+
+.timeline .event_even{
+    
+    margin-left:3vh;
+    transform: translateY(-23px);   
+    
+}
+.timeline .event_odd{    
+    margin-left:3vh;
+    transform: translateY(-80px);
+    
+}
+.timeline .event_even:hover{
+    
+    margin-left:3vh;
+    transform: translateY(-43px);  
+    transition-duration:2s; 
+    color:rgb(255, 0, 0);
+}
+
+.timeline .event_odd:hover{    
+    margin-left:3vh;
+    transform: translateY(-60px);
+    transition-duration:2s; 
+    color:rgb(255, 0, 0);
+    
+}
+
+.call_for_papers{
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 100px;
+    padding-right: 100px;
+    line-height:30px;
+    
+}
+.imp_dates table{
+    margin:auto;
+}
+.imp_dates table,tr,td,th{
+    border:3px solid black;
+    border-collapse: collapse;
+    padding:10px;
+    font-size:18px;
+    font-weight: 700px;
+}
+.publication{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.publication img{
+    width:100%;
+    margin-top:20px;
+}
+
+.sponsers{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.sponsers img{
+    width:250px;
+    height:150px;    
+}
+.contact_us{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
